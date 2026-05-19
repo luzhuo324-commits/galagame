@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>黑客松内斗狂想曲：终极修仙版</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Galgame / Interactive Fiction</p>
+        <h1>黑客松内斗狂想曲：终极修仙版</h1>
+      </div>
+      <button id="restartButton" class="ghost-button" type="button">重开这一局</button>
+    </header>
+
+    <section class="ticker-panel">
+      <span class="ticker-label">高压播报</span>
+      <div id="tickerText" class="ticker-text"></div>
+    </section>
+
+    <main class="layout">
+      <section class="story-panel">
+        <div class="scene-header">
+          <div>
+            <p id="sceneTag" class="scene-tag"></p>
+            <h2 id="sceneTitle"></h2>
+          </div>
+          <div class="countdown-wrap">
+            <span class="countdown-label">距离截稿</span>
+            <strong id="sceneTimer"></strong>
+          </div>
+        </div>
+
+        <article id="storyBody" class="story-body"></article>
+
+        <section class="options-panel">
+          <h3>你的操作</h3>
+          <div id="optionsList" class="options-list"></div>
+        </section>
+      </section>
+
+      <aside class="sidebar">
+        <section class="status-card">
+          <h3>全局状态</h3>
+          <div class="status-grid">
+            <div class="status-item">
+              <span>Player_San</span>
+              <strong id="sanValue">100</strong>
+            </div>
+            <div class="status-item">
+              <span>Hype_Level</span>
+              <strong id="hypeValue">0</strong>
+            </div>
+            <div class="status-item full">
+              <span>Code_Status</span>
+              <strong id="codeStatus">绝赞难产中</strong>
+            </div>
+          </div>
+          <div class="meter-block">
+            <label for="sanMeter">精神值稳定度</label>
+            <progress id="sanMeter" max="100" value="100"></progress>
+          </div>
+          <div class="meter-block">
+            <label for="hypeMeter">吹嘘指数</label>
+            <progress id="hypeMeter" max="100" value="0"></progress>
+          </div>
+        </section>
+
+        <section class="status-card">
+          <h3>队友图鉴</h3>
+          <ul class="team-list">
+            <li><strong>你：</strong><span>腹黑策士，擅长拉偏架与包装灾难。</span></li>
+            <li><strong>小船：</strong><span>Vim 盲打怪，眼里只有架构尊严。</span></li>
+            <li><strong>小菜板子：</strong><span>硬核前端，辣条和脾气都很顶。</span></li>
+            <li><strong>小陈：</strong><span>内向声优型后勤，临场容易神游。</span></li>
+          </ul>
+        </section>
+
+        <section class="status-card">
+          <h3>玩法说明</h3>
+          <ul class="rules-list">
+            <li>每个选择会改动你的精神值、吹嘘指数和项目状态。</li>
+            <li>部分结局当场触发，另一些会把你送进更离谱的下一幕。</li>
+            <li>高压播报会持续插入黑客松现场的窒息事件。</li>
+          </ul>
+        </section>
+      </aside>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
